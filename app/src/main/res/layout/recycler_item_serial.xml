@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <variable name="item" type="ir.prime.model.ItemsDataParcelable"/>
+        <variable
+            name="handler"
+            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+    </data>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ir.prime.custom_view.ImageViewCustom
+            android:src="@{item.mImage}"
+            android:layout_marginEnd="@dimen/item_margin"
+            android:background="@color/white"
+            android:onClick="@{() -> handler.SerialSelected(item)}"
+            android:layout_width="213dp"
+            android:layout_height="120dp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="season"
+            type="ir.prime.model.SeasonModel" />
+
+        <variable
+            name="adapterHandler"
+            type="ir.prime.android.DetailsSerialActivity.pagerSerialAdapter" />
+
+        <variable
+            name="seasonHandler"
+            type="ir.prime.custom_view.CustomViewPager" />
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        tools:context="ir.prime.android.DetailsSerialActivity">
+
+        <android.support.design.widget.AppBarLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ir.prime.custom_view.ImageViewCustom
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/black"
+                        android:src="@{season.backImage}"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_p30"
+                        android:paddingTop="@dimen/card_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ir.prime.custom_view.TextViewCustom
+                            android:id="@+id/titleTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:text="@{season.mTitle}"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <!--age rating add in layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <!--imdb rating -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/header_margin">
+
+                            <ir.prime.custom_view.ImageViewCustom
+                                android:layout_width="24dp"
+                                android:layout_height="24dp" />
+
+                            <ir.prime.custom_view.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{season.mAgeRating}"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:paddingEnd="@dimen/item_margin"
+                            android:paddingStart="@dimen/item_margin"
+                            android:weightSum="5">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3">
+
+                                <ir.prime.custom_view.ImageViewCustom
+                                    android:layout_width="170dp"
+                                    android:layout_height="120dp"
+                                    android:layout_alignParentStart="true"
+                                    android:src="@{season.image}"
+                                    android:background="@color/gray" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                                <ir.prime.custom_view.ButtonCustom
+                                    style="@style/ButtonTransparentCustom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_marginTop="@dimen/item_margin"
+                                    android:text="@string/add_to_watchlist"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+
+                                <ir.prime.custom_view.ButtonCustom
+                                    style="@style/ButtonTransparentCustom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_marginTop="@dimen/item_margin"
+                                    android:text="@string/play_trailer"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <ir.prime.custom_view.TabLayoutCustom
+                    android:id="@+id/tabs"
+                    style="@style/CustomTabLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layoutDirection="rtl"
+                    app:pager="@{seasonHandler}"
+                    android:background="@color/transparent" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ir.prime.custom_view.CustomViewPager
+            android:id="@+id/pager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:pagerAdapter="@{adapterHandler}" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

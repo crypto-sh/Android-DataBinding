@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="item" type="ir.prime.model.CommentInfoModel"/>
+        <variable
+            name="handler"
+            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+    </data>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="@dimen/header_margin"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <RatingBar
+                android:theme="@style/RatingBar"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/item_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="@{item.starRating}"
+                android:numStars="5" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ir.prime.custom_view.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="4.1"
+                    android:padding="1dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <ir.prime.custom_view.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="/"
+                    android:padding="1dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white_p80" />
+
+                <ir.prime.custom_view.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="5"
+                    android:padding="1dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white_p80" />
+
+            </LinearLayout>
+
+            <ir.prime.custom_view.TextViewCustom
+                android:text="1770"
+                android:textSize="16sp"
+                android:textColor="@color/white_p80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ir.prime.custom_view.TextViewCustom
+                android:text="customer reviews"
+                android:textSize="16sp"
+                android:textColor="@color/white_p80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/item_progress" bind:rating="@{item.rating1}"/>
+            <include layout="@layout/item_progress" bind:rating="@{item.rating2}"/>
+            <include layout="@layout/item_progress" bind:rating="@{item.rating3}"/>
+            <include layout="@layout/item_progress" bind:rating="@{item.rating4}"/>
+            <include layout="@layout/item_progress" bind:rating="@{item.rating5}"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

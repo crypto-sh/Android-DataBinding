@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorPrimary">#050505</color>
+    <color name="colorPrimaryDark">#1d1d1d</color>
+
+
+    <color name="white"         >#ffffff</color>
+    <color name="white_p30"     >#42ffffff</color>
+    <color name="white_p80"     >#aaffffff</color>
+    <color name="black"         >#000000</color>
+    <color name="gray"          >#6e6c6c</color>
+    <color name="black_p50"     >#66000000</color>
+    <color name="black_p30"     >#42000000</color>
+    <color name="transparent"   >#00000000</color>
+
+    <color name="star_active">#ffaf40</color>
+    <color name="indicator_color">#ffaf40</color>
+    <color name="unselected_color_tab">#747272</color>
+    <color name="selected_color_tab">#ffffff</color>
+    <color name="snackbar_color">#191919</color>
+
+</resources>

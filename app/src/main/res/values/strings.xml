@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PrimePlayer</string>
+
+
+    <!--errors-->
+    <string name="error_internet_access">Error internet connection</string>
+    <string name="error_connection_server">Error Connection server Please try later</string>
+    <string name="error_empty_list">List is Empty</string>
+
+
+    <string name="retry_button">Retry Button</string>
+
+    <string name="add_to_watchlist">Add To watchlist</string>
+    <string name="play_trailer">Play Trailer</string>
+
+    <string name="star">Star</string>
+    <string name="stars">Stars</string>
+
+</resources>

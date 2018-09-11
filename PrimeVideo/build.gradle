@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion       project.compileSdkVersion
+    defaultConfig {
+        minSdkVersion       project.minSdkVersion
+        targetSdkVersion    project.targetSdkVersion
+        versionCode         project.versionCode
+        versionName         project.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '27.0.3'
+}
+ext{
+    supportLibrary              = '27.0.2'
+    playServicesLibraryVersion  = '11.4.2'
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.vr:sdk-audio:1.80.0'
+    implementation 'com.android.support:support-v4:' + supportLibrary
+    implementation 'com.android.support:appcompat-v7:' + supportLibrary
+    implementation 'net.butterflytv.utils:rtmp-client:3.0.0'
+    implementation('com.android.support:leanback-v17:' + supportLibrary)
+    implementation('com.squareup.okhttp3:okhttp:3.9.0') {
+        exclude group: 'org.json'
+    }
+    implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.7.4'
+    implementation 'com.google.android.gms:play-services-ads:' + playServicesLibraryVersion
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}

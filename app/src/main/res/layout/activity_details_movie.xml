@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="details"
+            type="ir.prime.model.DetailsMovieModel" />
+
+        <variable
+            name="handler"
+            type="ir.prime.android.DetailsMovieActivity.DetailsHandler" />
+
+        <variable
+            name="recyclerAdapter"
+            type="ir.prime.adapter.RecyclerAdapterCustom" />
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        tools:context="ir.prime.android.DetailsMovieActivity">
+
+        <android.support.design.widget.AppBarLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ir.prime.custom_view.TextViewCustom
+                        android:id="@+id/titleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/header_margin"
+                        android:paddingRight="@dimen/header_margin"
+                        android:text="@{details.mTitle}"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="192dp"
+                        android:paddingEnd="@dimen/header_margin"
+                        android:paddingStart="@dimen/header_margin">
+
+                        <ir.prime.custom_view.ImageViewCustom
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/gray"
+                            android:src="@{details.mImage}" />
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="vertical">
+
+                            <ir.prime.custom_view.TextViewCustom
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="This Video is temporarily unavalable"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <ir.prime.custom_view.ButtonCustom
+                                style="@style/ButtonTransparentCustom"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_marginTop="@dimen/header_margin"
+                                android:onClick="@{() -> handler.AddtoWatchList(details)}"
+                                android:text="@string/add_to_watchlist"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <ir.prime.custom_view.ButtonCustom
+                                style="@style/ButtonTransparentCustom"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_marginTop="@dimen/header_margin"
+                                android:onClick="@{() -> handler.PlayTrailer(details)}"
+                                android:text="@string/play_trailer"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:pagerAdapter="@{recyclerAdapter}"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

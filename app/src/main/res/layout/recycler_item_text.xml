@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="item" type="ir.prime.model.ItemsDataParcelable"/>
+        <variable
+            name="handler"
+            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/item_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ir.prime.custom_view.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="@{item.mTitle}" />
+
+        <ir.prime.custom_view.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_p80"
+            android:textSize="14sp"
+            android:text="@{item.mDescription}" />
+
+    </LinearLayout>
+</layout>

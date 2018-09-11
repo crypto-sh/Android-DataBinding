@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/snackbar_color">
+
+    <ir.prime.custom_view.ImageViewCustom
+        android:id="@+id/warning"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_warning"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp" />
+
+    <ir.prime.custom_view.TextViewCustom
+        android:id="@+id/snackbar_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/warning"
+        android:layout_toStartOf="@id/warning"
+        android:padding="5dp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/snackbar_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

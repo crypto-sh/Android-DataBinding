@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="itemRow" type="ir.prime.model.RowDataParcelable"/>
+        <variable name="adapter" type="ir.prime.adapter.RecyclerAdapterCustom"/>
+        <variable
+            name="height"
+            type="Integer" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ir.prime.custom_view.TextViewCustom
+            android:gravity="center_vertical"
+            android:text="@{itemRow.mTitle}"
+            android:paddingLeft="@dimen/header_margin"
+            android:paddingRight="@dimen/header_margin"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@{height, default=wrap_content}"
+            android:pagerAdapter="@{adapter}"/>
+
+    </LinearLayout>
+</layout>

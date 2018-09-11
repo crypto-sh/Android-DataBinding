@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="itemRow"     type="ir.prime.model.RowDataParcelable"/>
+        <variable name="castAdapter" type="ir.prime.adapter.castAdapter" />
+        <variable
+            name="height"
+            type="Integer"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ir.prime.custom_view.TextViewCustom
+            android:gravity="center_vertical"
+            android:text="@{itemRow.mTitle}"
+            android:paddingLeft="@dimen/header_margin"
+            android:paddingRight="@dimen/header_margin"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <GridView
+            android:id="@+id/gridviewlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@{height, default=wrap_content}"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:pagerAdapter="@{castAdapter}"
+            android:columnCount="3"
+            android:numColumns="3" />
+
+    </LinearLayout>
+</layout>

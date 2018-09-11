@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="ir.prime.model.ItemsDataParcelable" />
+
+        <variable
+            name="title"
+            type="String"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="@dimen/header_margin">
+
+        <ir.prime.custom_view.TextViewCustom
+            android:gravity="center_vertical"
+            android:text="@{title}"
+            android:paddingLeft="@dimen/header_margin"
+            android:paddingRight="@dimen/header_margin"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ir.prime.custom_view.ImageViewCustom
+                android:layout_width="120dp"
+                android:layout_height="170dp"
+                android:background="@color/gray"
+                android:src="@{item.mImage}" />
+
+            <ir.prime.custom_view.TextViewCustom
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

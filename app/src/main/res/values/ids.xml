@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="text_error_show"/>
+    <item type="id" name="button_error_show"/>
+    <item type="id" name="tag_mediaitem_state_cache"/>
+
+</resources>

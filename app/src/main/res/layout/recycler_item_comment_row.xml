@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="item" type="ir.prime.model.CommentRowModel"/>
+        <variable
+            name="handler"
+            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/header_margin"
+        android:paddingRight="@dimen/header_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ir.prime.custom_view.TextViewCustom
+            android:text="@{item.mTitle}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RatingBar
+            android:theme="@style/RatingBar"
+            style="?attr/ratingBarStyleSmall"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/item_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="@{item.rating}"
+            android:numStars="5" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ir.prime.custom_view.TextViewCustom
+                android:text="@{item.mTime}"
+                android:textColor="@color/white_p30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ir.prime.custom_view.TextViewCustom
+                android:text="@{item.mUser}"
+                android:layout_marginStart="@dimen/card_margin"
+                android:textColor="@color/white_p30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ir.prime.custom_view.TextViewCustom
+            android:textColor="@color/white"
+            android:text="@{item.mComment}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

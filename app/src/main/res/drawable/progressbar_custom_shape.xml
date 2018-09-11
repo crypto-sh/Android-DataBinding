@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/star_active"
+                android:endColor="@color/star_active"
+                android:centerY="1.0"
+                android:angle="0"/>
+        </shape>
+    </item>
+
+    <!-- Define the progress properties like start color, end color etc -->
+    <item android:id="@android:id/progress">
+        <scale android:scaleWidth="100%" android:drawable="@drawable/progressbar_shape" />
+    </item>
+
+    <!-- Define the progress properties like start color, end color etc -->
+    <item android:id="@android:id/secondaryProgress">
+        <scale android:scaleWidth="100%" android:drawable="@drawable/progressbar_shape" />
+    </item>
+</layer-list>

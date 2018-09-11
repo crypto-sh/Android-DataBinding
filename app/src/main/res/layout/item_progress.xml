@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="rating"
+            type="ir.prime.model.ratingModelInfo"/>
+    </data>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ir.prime.custom_view.TextViewCustom
+            android:text="@{rating.title}"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/rateItem_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progressbar_custom_shape"
+            android:progress="@{rating.rating}"
+            android:max="10"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="12dp"/>
+
+        <ir.prime.custom_view.TextViewCustom
+            android:text="@{rating.percent}"
+            android:textColor="@color/white_p80"
+            android:textSize="12sp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

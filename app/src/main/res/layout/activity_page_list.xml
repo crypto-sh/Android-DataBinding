@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="adapterHandler"
+            type="android.support.v4.app.FragmentPagerAdapter" />
+        <variable
+            name="tabHandler"
+            type="ir.prime.custom_view.CustomViewPager" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_toolbar"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ir.prime.custom_view.TabLayoutCustom
+                android:id="@+id/tab_layout"
+                style="@style/CustomTabLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:pager="@{tabHandler}">
+
+            </ir.prime.custom_view.TabLayoutCustom>
+
+            <ir.prime.custom_view.CustomViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:pagerAdapter="@{adapterHandler}" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
