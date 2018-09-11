@@ -11,7 +11,4 @@ i used android DatBinding native.and you can use this code as sample of DataBind
 
 i developed exoplayer with overView layout for video player.
 
-
-
-
-
+Good Luck
