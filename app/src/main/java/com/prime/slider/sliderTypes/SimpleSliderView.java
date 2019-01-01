@@ -4,19 +4,22 @@ package com.prime.slider.sliderTypes;
 import android.content.Context;
 
 import androidx.databinding.DataBindingUtil;
+
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.prime.enum_package.RowType;
 import com.prime.model.ItemsDataParcelable;
 
 import com.prime.R;
 import com.prime.databinding.LayoutSliderItemBinding;
+import com.prime.pk_interface.MediaItemSelected;
 
 
 public class SimpleSliderView extends BaseSliderView {
 
     private ItemsDataParcelable item;
-    private BannerSelected bannerSelected;
+    private MediaItemSelected bannerSelected;
     private LayoutSliderItemBinding binding;
 
     public SimpleSliderView(Context context, ItemsDataParcelable item) {
@@ -36,15 +39,12 @@ public class SimpleSliderView extends BaseSliderView {
     public class Handler{
         public void ImageSelected(ItemsDataParcelable item){
             if (bannerSelected != null){
-                bannerSelected.onSelectedbanner(item);
+                bannerSelected.onSelectedItem(item,RowType.BANNER);
             }
         }
     }
 
-    public interface BannerSelected {
-        void onSelectedbanner(ItemsDataParcelable item);
-    }
-    public void setBannerSelected(BannerSelected listener){
+    public void setBannerSelected(MediaItemSelected listener){
         bannerSelected = listener;
     }
 

@@ -36,10 +36,12 @@ import com.prime.databinding.RecyclerItemTextBinding;
 import com.prime.databinding.RecyclerRowBannerBinding;
 import com.prime.databinding.RecyclerRowItemBinding;
 
+
+
 /**
  * Created by alishatergholi on 2/18/18.
  */
-public class RecyclerAdapterPageList extends RecyclerAdapterCustom implements MediaItemSelected,SimpleSliderView.BannerSelected {
+public class RecyclerAdapterPageList extends RecyclerAdapterCustom implements MediaItemSelected {
 
     private MediaItemSelected mediaItemSelected;
 
@@ -67,7 +69,7 @@ public class RecyclerAdapterPageList extends RecyclerAdapterCustom implements Me
                 RecyclerItemCastBinding castBinding              = DataBindingUtil.inflate(lInflater,R.layout.recycler_item_cast,parent,false);
                 return new CastBindingHolder(castBinding);
             case EPISODE:
-                RecyclerItemEpisodeBinding episodBinding          = DataBindingUtil.inflate(lInflater,R.layout.recycler_item_episode,parent,false);
+                RecyclerItemEpisodeBinding episodBinding         = DataBindingUtil.inflate(lInflater,R.layout.recycler_item_episode,parent,false);
                 return new EpisodeBindingHolder(episodBinding);
             case DIRECTOR:
                 RecyclerItemDirectorBinding directorBinding      = DataBindingUtil.inflate(lInflater,R.layout.recycler_item_director,parent,false);
@@ -147,14 +149,6 @@ public class RecyclerAdapterPageList extends RecyclerAdapterCustom implements Me
         return listRow.size();
     }
 
-
-    @Override
-    public void onSelectedbanner(ItemsDataParcelable item) {
-        if (mediaItemSelected != null){
-            mediaItemSelected.onSelectedItem(item, RowType.BANNER);
-        }
-    }
-
     @Override
     public void onSelectedItem(ItemsDataParcelable item, RowType type) {
         if (mediaItemSelected != null){
@@ -200,7 +194,7 @@ public class RecyclerAdapterPageList extends RecyclerAdapterCustom implements Me
             try {
                 binding.recyclerView.setLayoutManager(new LayoutManagerCustom(binding.getRoot().getContext(),false));
                 RecyclerAdapterRowList adapter = new RecyclerAdapterRowList(rowParcelable);
-                adapter.setOnHorizontalSelected(RecyclerAdapterPageList.this);
+                adapter.setMediaItemSelected(RecyclerAdapterPageList.this);
                 binding.setHeight(adapter.getRowHeight());
                 binding.setAdapter(adapter);
                 binding.setItemRow(rowParcelable);

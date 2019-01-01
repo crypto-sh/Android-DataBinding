@@ -71,7 +71,7 @@ public class RecyclerAdapterRowList extends RecyclerAdapterCustom {
         return rowData.size();
     }
 
-    public void setOnHorizontalSelected(MediaItemSelected listener){
+    public void setMediaItemSelected(MediaItemSelected listener){
         horizontalItemSelected = listener;
     }
 
@@ -122,13 +122,13 @@ public class RecyclerAdapterRowList extends RecyclerAdapterCustom {
     public class Handler{
         public void MovieSelected(ItemsDataParcelable item){
             if (horizontalItemSelected != null){
-//                horizontalItemSelected.onSelectedItem(item, Api.RowType.MOVIE);
+                horizontalItemSelected.onSelectedItem(item, RowType.MOVIE);
             }
         }
 
         public void SerialSelected(ItemsDataParcelable item){
             if (horizontalItemSelected != null){
-//                horizontalItemSelected.onSelectedItem(item, Api.RowType.SERIAL);
+                horizontalItemSelected.onSelectedItem(item, RowType.SERIAL);
             }
         }
     }
