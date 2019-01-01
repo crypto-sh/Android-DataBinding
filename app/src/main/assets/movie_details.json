@@ -1,0 +1,118 @@
+{
+  "status": 1,
+  "pageData": {
+    "pageKey": "moviedetails",
+    "title": "Details",
+    "theme": "BLACK"
+  },
+  "movie": {
+    "title": "Game",
+    "image": "http://example.com/test.jpg",
+    "backImage": "http://example.com/test.jpg",
+    "ageRating": "General_Audiences",
+    "quality": "SD_240p",
+    "imdbRating": "8.9/10",
+    "details": "movie details\nmovie details\nmovie details\n",
+    "alsoWatched": [
+      {
+        "rowTitle": "Banners",
+        "rowType": "BANNER",
+        "rowData": [
+          {
+            "id": "PuVv44Io",
+            "image": "http://example.com/test.jpg"
+          },
+          {
+            "id": "BoOjarTm",
+            "image": "http://example.com/test.jpg"
+          }
+        ]
+      },
+      {
+        "rowTitle": "Serials",
+        "rowType": "SERIAL",
+        "rowData": [
+          {
+            "id": "RCMPT79P",
+            "image": "http://example.com/test.jpg"
+          },
+          {
+            "id": "2vUTnhaZ",
+            "image": "http://example.com/test.jpg"
+          }
+        ]
+      },
+      {
+        "rowTitle": "Movies 1",
+        "rowType": "MOVIE",
+        "rowData": [
+          {
+            "id": "CyujYeOm",
+            "image": "http://example.com/test.jpg"
+          },
+          {
+            "id": "KfWf4aLS",
+            "image": "http://example.com/test.jpg"
+          }
+        ]
+      },
+      {
+        "rowTitle": "Movies 2",
+        "rowType": "MOVIE",
+        "rowData": [
+          {
+            "id": "RLW8A8sd",
+            "image": "http://example.com/test.jpg"
+          },
+          {
+            "id": "64isLKs4",
+            "image": "http://example.com/test.jpg"
+          }
+        ]
+      }
+    ],
+    "cast": [
+      {
+        "id": "TLqne7Zt",
+        "title": "person name 1",
+        "image": "http://example.com/test.jpg",
+        "description": "description for person\ndescription for person\ndescription for person\n"
+      },
+      {
+        "id": "Q3Ag3t1z",
+        "title": "person name 2",
+        "image": "http://example.com/test.jpg",
+        "description": "description for person\ndescription for person\ndescription for person\n"
+      }
+    ],
+    "director": [
+      {
+        "id": "tdo2gvtC",
+        "title": "person name 1",
+        "image": "http://example.com/test.jpg",
+        "description": "description for person\ndescription for person\ndescription for person\n"
+      },
+      {
+        "id": "XsDzReVC",
+        "title": "person name 2",
+        "image": "http://example.com/test.jpg",
+        "description": "description for person\ndescription for person\ndescription for person\n"
+      }
+    ],
+    "writer": [
+      {
+        "id": "rIAXeig2",
+        "title": "person name 1",
+        "image": "http://example.com/test.jpg",
+        "description": "description for person\ndescription for person\ndescription for person\n"
+      },
+      {
+        "id": "aRYno36V",
+        "title": "person name 2",
+        "image": "http://example.com/test.jpg",
+        "description": "description for person\ndescription for person\ndescription for person\n"
+      }
+    ],
+    "trivia": "trivia\ntrivia\ntrivia\ntrivia\ntrivia\n"
+  }
+}

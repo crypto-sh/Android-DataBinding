@@ -1,0 +1,83 @@
+{
+  "status": 1,
+  "pageData": {
+    "pageKey": "tab1",
+    "title": "Iran Prime",
+    "theme": "BLACK"
+  },
+  "tabRow": [
+    {
+      "pageKey": "tab1",
+      "title": "Home",
+      "isSelected": true
+    },
+    {
+      "pageKey": "tab2",
+      "title": "TV Shows",
+      "isSelected": false
+    },
+    {
+      "pageKey": "tab3",
+      "title": "Movies",
+      "isSelected": false
+    }
+  ],
+  "listRow": [
+    {
+      "rowTitle": "Banners",
+      "rowType": "BANNER",
+      "rowData": [
+        {
+          "id": "2dVaAQUV",
+          "image": "http://example.com/test.jpg"
+        },
+        {
+          "id": "XkhUoVDA",
+          "image": "http://example.com/test.jpg"
+        }
+      ]
+    },
+    {
+      "rowTitle": "Serials",
+      "rowType": "SERIAL",
+      "rowData": [
+        {
+          "id": "g8jNwCuu",
+          "image": "http://example.com/test.jpg"
+        },
+        {
+          "id": "MUe5vOYb",
+          "image": "http://example.com/test.jpg"
+        }
+      ]
+    },
+    {
+      "rowTitle": "Movies 1",
+      "rowType": "MOVIE",
+      "rowData": [
+        {
+          "id": "wQsk81nu",
+          "image": "http://example.com/test.jpg"
+        },
+        {
+          "id": "iOvmBgS2",
+          "image": "http://example.com/test.jpg"
+        }
+      ]
+    },
+    {
+      "rowTitle": "Movies 2",
+      "rowType": "MOVIE",
+      "rowData": [
+        {
+          "id": "sZzuNGAD",
+          "image": "http://example.com/test.jpg"
+        },
+        {
+          "id": "H2dsodsz",
+          "image": "http://example.com/test.jpg"
+        }
+      ]
+    }
+  ]
+}

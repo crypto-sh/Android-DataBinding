@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ir.prime.slider.SliderLayout
+        <com.prime.slider.SliderLayout
             android:id="@+id/slider"
             android:scrollbarFadeDuration="6000"
             android:layout_marginBottom="@dimen/card_margin"

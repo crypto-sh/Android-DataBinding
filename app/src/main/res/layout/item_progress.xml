@@ -3,7 +3,7 @@
     <data>
         <variable
             name="rating"
-            type="ir.prime.model.ratingModelInfo"/>
+            type="com.prime.model.RatingModelInfo"/>
     </data>
     <LinearLayout
         android:orientation="horizontal"
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:text="@{rating.title}"
             android:textSize="12sp"
             android:textColor="@color/white"
@@ -23,13 +23,13 @@
             android:id="@+id/rateItem_progress"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:progressDrawable="@drawable/progressbar_custom_shape"
-            android:progress="@{rating.rating}"
+            android:progress="@{safeUnbox(rating.rating)}"
             android:max="10"
             android:layout_weight="5"
             android:layout_width="0dp"
             android:layout_height="12dp"/>
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:text="@{rating.percent}"
             android:textColor="@color/white_p80"
             android:textSize="12sp"

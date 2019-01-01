@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="temp"        type="ir.prime.model.UserInfo"/>
-        <variable name="handler"     type="ir.prime.android.MainActivity.MyHandler"/>
+        <variable name="temp"        type="com.prime.model.UserInfo"/>
+        <variable name="handler"     type="com.prime.android.MainActivity.MyHandler"/>
     </data>
     <LinearLayout
         android:orientation="vertical"

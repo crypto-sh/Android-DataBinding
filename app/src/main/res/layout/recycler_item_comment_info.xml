@@ -2,10 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="item" type="ir.prime.model.CommentInfoModel"/>
+        <variable name="item" type="com.prime.model.CommentInfoModel"/>
+
         <variable
             name="handler"
-            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+            type="com.prime.adapter.RecyclerAdapterRowList.Handler"/>
     </data>
     <LinearLayout
         android:orientation="horizontal"
@@ -35,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ir.prime.custom_view.TextViewCustom
+                <com.prime.custom_view.TextViewCustom
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
@@ -44,7 +45,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/white" />
 
-                <ir.prime.custom_view.TextViewCustom
+                <com.prime.custom_view.TextViewCustom
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
@@ -53,7 +54,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/white_p80" />
 
-                <ir.prime.custom_view.TextViewCustom
+                <com.prime.custom_view.TextViewCustom
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
@@ -64,7 +65,7 @@
 
             </LinearLayout>
 
-            <ir.prime.custom_view.TextViewCustom
+            <com.prime.custom_view.TextViewCustom
                 android:text="1770"
                 android:textSize="16sp"
                 android:textColor="@color/white_p80"
@@ -72,7 +73,7 @@
                 android:layout_height="wrap_content" />
 
 
-            <ir.prime.custom_view.TextViewCustom
+            <com.prime.custom_view.TextViewCustom
                 android:text="customer reviews"
                 android:textSize="16sp"
                 android:textColor="@color/white_p80"

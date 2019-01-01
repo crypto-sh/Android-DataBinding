@@ -9,7 +9,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/header_margin">
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

@@ -5,12 +5,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ir.prime.slider.Tricks.InfiniteViewPager
+        <com.prime.slider.tricks.InfiniteViewPager
             android:id="@+id/slider_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <ir.prime.slider.Indicators.PagerIndicator
+        <com.prime.slider.indicators.PagerIndicator
             android:id="@+id/default_center_bottom_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

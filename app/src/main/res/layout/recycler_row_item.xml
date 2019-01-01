@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="itemRow" type="ir.prime.model.RowDataParcelable"/>
-        <variable name="adapter" type="ir.prime.adapter.RecyclerAdapterCustom"/>
+        <variable name="itemRow" type="com.prime.model.PageListParcelable"/>
+        <variable name="adapter" type="com.prime.adapter.RecyclerAdapterCustom"/>
         <variable
             name="height"
             type="Integer" />
@@ -14,16 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:gravity="center_vertical"
-            android:text="@{itemRow.mTitle}"
+            android:text="@{itemRow.rowTitle}"
             android:paddingLeft="@dimen/header_margin"
             android:paddingRight="@dimen/header_margin"
             android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="42dp" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="@{height, default=wrap_content}"

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="item" type="ir.prime.model.ItemsDataParcelable"/>
-        <variable
-            name="handler"
-            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+        <variable name="item" type="com.prime.model.ItemsDataParcelable"/>
+        <!--<variable-->
+            <!--name="handler"-->
+            <!--type="com.prime.adapter.RecyclerAdapterRowList"/>-->
     </data>
     <LinearLayout
         android:orientation="vertical"
@@ -12,19 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:text="@{item.mTitle}" />
+            android:text="@{item.title}" />
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white_p80"
             android:textSize="14sp"
-            android:text="@{item.mDescription}" />
+            android:text="@{item.details}" />
 
     </LinearLayout>
 </layout>

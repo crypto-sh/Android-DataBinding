@@ -7,31 +7,31 @@
 
         <variable
             name="details"
-            type="ir.prime.model.DetailsMovieModel" />
+            type="com.prime.model.DetailsMovieModel" />
 
         <variable
             name="handler"
-            type="ir.prime.android.DetailsMovieActivity.DetailsHandler" />
+            type="com.prime.android.DetailsMovieActivity.DetailsHandler" />
 
         <variable
             name="recyclerAdapter"
-            type="ir.prime.adapter.RecyclerAdapterCustom" />
+            type="com.prime.adapter.RecyclerAdapterCustom" />
     </data>
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
         android:orientation="vertical"
-        tools:context="ir.prime.android.DetailsMovieActivity">
+        tools:context="com.prime.com.prime.android.DetailsMovieActivity">
 
-        <android.support.design.widget.AppBarLayout
+        <com.google.android.material.appbar.AppBarLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
 
-            <android.support.design.widget.CollapsingToolbarLayout
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
@@ -43,14 +43,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <ir.prime.custom_view.TextViewCustom
+                    <com.prime.custom_view.TextViewCustom
                         android:id="@+id/titleTextView"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:gravity="center_vertical"
                         android:paddingLeft="@dimen/header_margin"
                         android:paddingRight="@dimen/header_margin"
-                        android:text="@{details.mTitle}"
+                        android:text="@{details.title}"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -61,12 +61,12 @@
                         android:paddingEnd="@dimen/header_margin"
                         android:paddingStart="@dimen/header_margin">
 
-                        <ir.prime.custom_view.ImageViewCustom
+                        <com.prime.custom_view.ImageViewCustom
                             android:layout_width="140dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:background="@color/gray"
-                            android:src="@{details.mImage}" />
+                            android:src="@{details.image}" />
 
                         <LinearLayout
                             android:layout_width="140dp"
@@ -74,7 +74,7 @@
                             android:layout_alignParentEnd="true"
                             android:orientation="vertical">
 
-                            <ir.prime.custom_view.TextViewCustom
+                            <com.prime.custom_view.TextViewCustom
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
@@ -82,7 +82,7 @@
                                 android:textColor="@color/white"
                                 android:textSize="12sp" />
 
-                            <ir.prime.custom_view.ButtonCustom
+                            <com.prime.custom_view.ButtonCustom
                                 style="@style/ButtonTransparentCustom"
                                 android:layout_width="match_parent"
                                 android:layout_height="42dp"
@@ -92,7 +92,7 @@
                                 android:textColor="@color/white"
                                 android:textSize="12sp" />
 
-                            <ir.prime.custom_view.ButtonCustom
+                            <com.prime.custom_view.ButtonCustom
                                 style="@style/ButtonTransparentCustom"
                                 android:layout_width="match_parent"
                                 android:layout_height="42dp"
@@ -104,16 +104,16 @@
                         </LinearLayout>
                     </RelativeLayout>
                 </LinearLayout>
-            </android.support.design.widget.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        </android.support.design.widget.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:pagerAdapter="@{recyclerAdapter}"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

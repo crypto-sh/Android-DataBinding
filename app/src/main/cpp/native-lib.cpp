@@ -3,7 +3,7 @@
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_ir_prime_utils_Apps_getSaltString(
+Java_com_prime_utils_Apps_getSaltString(
         JNIEnv *env,
         jobject /* this */) {
     std::string salt = "vasl-jikopick-1";
@@ -12,7 +12,7 @@ Java_ir_prime_utils_Apps_getSaltString(
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_ir_prime_utils_Apps_getAppIDString(
+Java_com_prime_utils_Apps_getAppIDString(
         JNIEnv *env,
         jobject /* this */) {
     std::string appid= "27687eb5-6853-11e6-b325-005056a96c03";

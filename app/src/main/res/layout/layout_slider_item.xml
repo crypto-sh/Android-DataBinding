@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="item"  type="ir.prime.model.ItemsDataParcelable"/>
-        <variable name="handler" type="ir.prime.slider.SliderTypes.simpleSliderView.Handler"/>
+
+        <variable name="item"  type="com.prime.model.ItemsDataParcelable"/>
+
+        <variable name="handler" type="com.prime.slider.sliderTypes.SimpleSliderView.Handler"/>
     </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,11 +17,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <ir.prime.custom_view.ImageViewCustom
+        <com.prime.custom_view.ImageViewCustom
             android:id="@+id/slider_image"
             android:scaleType="fitXY"
             android:layout_margin="0dp"
-            android:src="@{item.mImage}"
+            android:src="@{item.image}"
             android:onClick="@{() -> handler.ImageSelected(item)}"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

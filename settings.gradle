@@ -1,1 +1,1 @@
-include ':app', ':PrimeVideo'
+include ':app'

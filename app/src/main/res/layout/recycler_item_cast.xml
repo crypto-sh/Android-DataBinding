@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="itemRow"     type="ir.prime.model.RowDataParcelable"/>
-        <variable name="castAdapter" type="ir.prime.adapter.castAdapter" />
+        <variable name="itemRow"     type="com.prime.model.PageListParcelable"/>
+        <variable name="castAdapter" type="com.prime.adapter.CastAdapter" />
         <variable
             name="height"
             type="Integer"/>
@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:gravity="center_vertical"
-            android:text="@{itemRow.mTitle}"
+            android:text="@{itemRow.rowTitle}"
             android:paddingLeft="@dimen/header_margin"
             android:paddingRight="@dimen/header_margin"
             android:textColor="@color/white"

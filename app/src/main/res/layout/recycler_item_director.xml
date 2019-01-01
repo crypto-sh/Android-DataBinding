@@ -4,7 +4,7 @@
     <data>
         <variable
             name="item"
-            type="ir.prime.model.ItemsDataParcelable" />
+            type="com.prime.model.ItemsDataParcelable" />
 
         <variable
             name="title"
@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:padding="@dimen/header_margin">
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:gravity="center_vertical"
             android:text="@{title}"
             android:paddingLeft="@dimen/header_margin"
@@ -31,13 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ir.prime.custom_view.ImageViewCustom
+            <com.prime.custom_view.ImageViewCustom
                 android:layout_width="120dp"
                 android:layout_height="170dp"
                 android:background="@color/gray"
-                android:src="@{item.mImage}" />
+                android:src="@{item.image}" />
 
-            <ir.prime.custom_view.TextViewCustom
+            <com.prime.custom_view.TextViewCustom
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

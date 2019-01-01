@@ -5,13 +5,13 @@
     <data>
         <variable
             name="adapterHandler"
-            type="android.support.v4.app.FragmentPagerAdapter" />
+            type="androidx.fragment.app.FragmentStatePagerAdapter" />
         <variable
             name="tabHandler"
-            type="ir.prime.custom_view.CustomViewPager" />
+            type="com.prime.custom_view.CustomViewPager" />
     </data>
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -23,17 +23,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ir.prime.custom_view.TabLayoutCustom
+            <com.prime.custom_view.TabLayoutCustom
                 android:id="@+id/tab_layout"
                 style="@style/CustomTabLayoutStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                app:pager="@{tabHandler}">
+                app:pager="@{tabHandler}" />
 
-            </ir.prime.custom_view.TabLayoutCustom>
-
-            <ir.prime.custom_view.CustomViewPager
+            <com.prime.custom_view.CustomViewPager
                 android:id="@+id/pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -41,5 +39,5 @@
 
         </LinearLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

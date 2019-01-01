@@ -5,42 +5,42 @@
     <data>
         <variable
             name="season"
-            type="ir.prime.model.SeasonModel" />
+            type="com.prime.model.SeasonModel" />
 
         <variable
             name="adapterHandler"
-            type="ir.prime.android.DetailsSerialActivity.pagerSerialAdapter" />
+            type="com.prime.adapter.PagerSerialAdapter" />
 
         <variable
             name="seasonHandler"
-            type="ir.prime.custom_view.CustomViewPager" />
+            type="com.prime.custom_view.CustomViewPager" />
     </data>
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
         android:orientation="vertical"
-        tools:context="ir.prime.android.DetailsSerialActivity">
+        tools:context="com.prime.com.prime.android.DetailsSerialActivity">
 
-        <android.support.design.widget.AppBarLayout
+        <com.google.android.material.appbar.AppBarLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
 
-            <android.support.design.widget.CollapsingToolbarLayout
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
                 app:contentScrim="@color/transparent"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ir.prime.custom_view.ImageViewCustom
+                    <com.prime.custom_view.ImageViewCustom
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:layout_alignParentStart="true"
@@ -56,7 +56,7 @@
                         android:orientation="vertical"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <ir.prime.custom_view.TextViewCustom
+                        <com.prime.custom_view.TextViewCustom
                             android:id="@+id/titleTextView"
                             android:layout_width="match_parent"
                             android:layout_height="42dp"
@@ -76,11 +76,11 @@
                             android:orientation="horizontal"
                             android:padding="@dimen/header_margin">
 
-                            <ir.prime.custom_view.ImageViewCustom
+                            <com.prime.custom_view.ImageViewCustom
                                 android:layout_width="24dp"
                                 android:layout_height="24dp" />
 
-                            <ir.prime.custom_view.TextViewCustom
+                            <com.prime.custom_view.TextViewCustom
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@{season.mAgeRating}"
@@ -98,7 +98,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="3">
 
-                                <ir.prime.custom_view.ImageViewCustom
+                                <com.prime.custom_view.ImageViewCustom
                                     android:layout_width="170dp"
                                     android:layout_height="120dp"
                                     android:layout_alignParentStart="true"
@@ -114,7 +114,7 @@
                                 android:layout_weight="2"
                                 android:orientation="vertical">
 
-                                <ir.prime.custom_view.ButtonCustom
+                                <com.prime.custom_view.ButtonCustom
                                     style="@style/ButtonTransparentCustom"
                                     android:layout_width="match_parent"
                                     android:layout_height="42dp"
@@ -124,7 +124,7 @@
                                     android:textSize="12sp" />
 
 
-                                <ir.prime.custom_view.ButtonCustom
+                                <com.prime.custom_view.ButtonCustom
                                     style="@style/ButtonTransparentCustom"
                                     android:layout_width="match_parent"
                                     android:layout_height="42dp"
@@ -136,17 +136,17 @@
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-                </android.support.constraint.ConstraintLayout>
-            </android.support.design.widget.CollapsingToolbarLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-            <android.support.v7.widget.Toolbar
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp">
 
-                <ir.prime.custom_view.TabLayoutCustom
+                <com.prime.custom_view.TabLayoutCustom
                     android:id="@+id/tabs"
                     style="@style/CustomTabLayoutStyle"
                     android:layout_width="match_parent"
@@ -155,16 +155,16 @@
                     app:pager="@{seasonHandler}"
                     android:background="@color/transparent" />
 
-            </android.support.v7.widget.Toolbar>
+            </androidx.appcompat.widget.Toolbar>
 
-        </android.support.design.widget.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <ir.prime.custom_view.CustomViewPager
+        <com.prime.custom_view.CustomViewPager
             android:id="@+id/pager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:pagerAdapter="@{adapterHandler}" />
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

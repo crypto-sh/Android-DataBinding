@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
-        <variable name="item" type="ir.prime.model.CommentRowModel"/>
-        <variable
-            name="handler"
-            type="ir.prime.adapter.RecyclerAdapterRowList.Handler"/>
+        <variable name="item" type="com.prime.model.CommentRowModel"/>
+        <!--<variable-->
+            <!--name="handler"-->
+            <!--type="com.prime.adapter.RecyclerAdapterRowList.Handler"/>-->
     </data>
     <LinearLayout
         android:orientation="vertical"
@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ir.prime.custom_view.TextViewCustom
-            android:text="@{item.mTitle}"
+        <com.prime.custom_view.TextViewCustom
+            android:text="@{item.title}"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -36,14 +36,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ir.prime.custom_view.TextViewCustom
-                android:text="@{item.mTime}"
+            <com.prime.custom_view.TextViewCustom
+                android:text="@{item.time}"
                 android:textColor="@color/white_p30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <ir.prime.custom_view.TextViewCustom
-                android:text="@{item.mUser}"
+            <com.prime.custom_view.TextViewCustom
+                android:text="@{item.user}"
                 android:layout_marginStart="@dimen/card_margin"
                 android:textColor="@color/white_p30"
                 android:layout_width="wrap_content"
@@ -51,9 +51,9 @@
 
         </LinearLayout>
 
-        <ir.prime.custom_view.TextViewCustom
+        <com.prime.custom_view.TextViewCustom
             android:textColor="@color/white"
-            android:text="@{item.mComment}"
+            android:text="@{item.comment}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

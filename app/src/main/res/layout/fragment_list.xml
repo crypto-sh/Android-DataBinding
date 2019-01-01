@@ -2,14 +2,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="adapter" type="ir.prime.adapter.RecyclerAdapterCustom"/>
+        <variable name="adapter" type="com.prime.adapter.RecyclerAdapterCustom"/>
     </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="ir.prime.fragment.ListFragment">
+        tools:context="com.prime.com.prime.fragment.ListFragment">
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

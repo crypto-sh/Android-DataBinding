@@ -1,0 +1,280 @@
+{
+  "status": 1,
+  "pageData": {
+    "pageKey": "serialdetails",
+    "title": "Details",
+    "theme": "BLACK"
+  },
+  "seasons": [
+    {
+      "tabTitle": "Season 1",
+      "seasonInfo": {
+        "title": "The Grand Tour - Season 1",
+        "image": "http://example.com/test.jpg",
+        "backImage": "http://example.com/test.jpg",
+        "ageRating": "General_Audiences",
+        "quality": "SD_480p",
+        "imdbRating": "8.8/10",
+        "details": "Season details\nSeason details\nSeason details\n",
+        "episode": [
+          {
+            "id": "joWtaEP2",
+            "title": "unH3iEKl",
+            "description": "0CG1Zqca",
+            "duration": "mA1bzq0A",
+            "ageRating": "General_Audiences",
+            "quality": "SD_480p",
+            "canDownload": true,
+            "canStream": true
+          },
+          {
+            "id": "5vXslmK1",
+            "title": "BNG0bq6i",
+            "description": "7lZCccMK",
+            "duration": "DK0DmL67",
+            "ageRating": "General_Audiences",
+            "quality": "SD_480p",
+            "canDownload": true,
+            "canStream": true
+          }
+        ],
+        "alsoWatched": [
+          {
+            "rowTitle": "Banners",
+            "rowType": "BANNER",
+            "rowData": [
+              {
+                "id": "2pS2jHtn",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "HfqumK6z",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          },
+          {
+            "rowTitle": "Serials",
+            "rowType": "SERIAL",
+            "rowData": [
+              {
+                "id": "q4O9CZlm",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "PoYcwTVN",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          },
+          {
+            "rowTitle": "Movies 1",
+            "rowType": "MOVIE",
+            "rowData": [
+              {
+                "id": "4sdtYdJ5",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "Qd4v8PJ3",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          },
+          {
+            "rowTitle": "Movies 2",
+            "rowType": "MOVIE",
+            "rowData": [
+              {
+                "id": "nC9UzQT5",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "UNudcvf9",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          }
+        ],
+        "cast": [
+          {
+            "id": "BtXlPhRb",
+            "title": "person name 1",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          },
+          {
+            "id": "J0pl1LIh",
+            "title": "person name 2",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          }
+        ],
+        "director": [
+          {
+            "id": "My71s3uO",
+            "title": "person name 1",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          },
+          {
+            "id": "LTYt46M8",
+            "title": "person name 2",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          }
+        ],
+        "writer": [
+          {
+            "id": "ewz0aUok",
+            "title": "person name 1",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          },
+          {
+            "id": "5gyZ0cTp",
+            "title": "person name 2",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          }
+        ],
+        "trivia": "trivia\ntrivia\ntrivia\ntrivia\ntrivia\n"
+      }
+    },
+    {
+      "tabTitle": "Season 2",
+      "seasonInfo": {
+        "title": "The Grand Tour - new name - Season 2",
+        "image": "http://example.com/test.jpg",
+        "backImage": "http://example.com/test.jpg",
+        "ageRating": "General_Audiences",
+        "quality": "SD_240p",
+        "imdbRating": "8.9/10",
+        "details": "Season details\nSeason details\nSeason details\n",
+        "episode": [
+          {
+            "id": "aqRWWlVi",
+            "title": "1ml3KLX2",
+            "description": "5chKlR5L",
+            "duration": "nJeX8N1s",
+            "ageRating": "General_Audiences",
+            "quality": "SD_480p",
+            "canDownload": true,
+            "canStream": true
+          },
+          {
+            "id": "M4RgVXjr",
+            "title": "qidq9SBQ",
+            "description": "8EOcBfiV",
+            "duration": "anUZ3mjq",
+            "ageRating": "General_Audiences",
+            "quality": "SD_480p",
+            "canDownload": true,
+            "canStream": true
+          }
+        ],
+        "alsoWatched": [
+          {
+            "rowTitle": "Banners",
+            "rowType": "BANNER",
+            "rowData": [
+              {
+                "id": "zAT0SzvE",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "wHRTYjIr",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          },
+          {
+            "rowTitle": "Serials",
+            "rowType": "SERIAL",
+            "rowData": [
+              {
+                "id": "PeWfDzMX",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "91X9Qemi",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          },
+          {
+            "rowTitle": "Movies 1",
+            "rowType": "MOVIE",
+            "rowData": [
+              {
+                "id": "WTvzzSvP",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "NneplKl9",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          },
+          {
+            "rowTitle": "Movies 2",
+            "rowType": "MOVIE",
+            "rowData": [
+              {
+                "id": "TvRVaywS",
+                "image": "http://example.com/test.jpg"
+              },
+              {
+                "id": "oY7qgzr0",
+                "image": "http://example.com/test.jpg"
+              }
+            ]
+          }
+        ],
+        "cast": [
+          {
+            "id": "CJq7PBlE",
+            "title": "person name 1",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          },
+          {
+            "id": "iuMzV3Jt",
+            "title": "person name 2",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          }
+        ],
+        "director": [
+          {
+            "id": "eNmMnvsz",
+            "title": "person name 1",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          },
+          {
+            "id": "uYMstHEE",
+            "title": "person name 2",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          }
+        ],
+        "writer": [
+          {
+            "id": "RuTLbBNZ",
+            "title": "person name 1",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          },
+          {
+            "id": "rpE4GB2t",
+            "title": "person name 2",
+            "image": "http://example.com/test.jpg",
+            "description": "description for person\ndescription for person\ndescription for person\n"
+          }
+        ],
+        "trivia": "trivia\ntrivia\ntrivia\ntrivia\ntrivia\n"
+      }
+    }
+  ]
+}
