@@ -44,9 +44,10 @@ Binding activity
         ```
    - change [MainActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/MainActivity.java)
   
-        change```java 
-                setContentView(R.layout.activity_main);               
-              ```          
+        change
+        ```java 
+           setContentView(R.layout.activity_main);             
+        ```          
         to 
         
                 ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);  
