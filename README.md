@@ -43,11 +43,12 @@ Binding activity
           </layout>
         ```
    - change [MainActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/MainActivity.java)
-        \nchange 
+  
+        -change 
             ```java setContentView(R.layout.activity_main); ```       
-        \nto 
+        -to 
             ```java ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main); ```
-        \nand after that you can bind your parametr
+        -and after that you can bind your parametr
           ```java
               binding.setTemp(user);
               binding.setHandler(new MyHandler());
