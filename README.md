@@ -105,7 +105,7 @@ for the first step you need add this code into your module gradle
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </layout>
     ```
-    - for Binding Parameter you can check [PageListActivity.java](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/PageListActivity.java) to realise that better.
+    - for Binding java part you can check [PageListActivity.java](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/PageListActivity.java) to realise that better.
     
 - Binding ImageView source
 
