@@ -60,7 +60,7 @@ Binding activity
 
 Binding Adapter to TabLayout and ViewPager        
     - [activity_page_list.xml](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/src/main/res/layout/activity_page_list.xml)
-    ``xml
+    ```xml
     <layout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
