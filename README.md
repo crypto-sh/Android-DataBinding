@@ -46,11 +46,15 @@ Binding activity
   
         change 
         
-            ```java setContentView(R.layout.activity_main); ```       
+            ```java
+                setContentView(R.layout.activity_main); 
+            ```   
             
         to 
         
-            ```java ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);  ```        
+            ```java 
+                ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);  
+            ```    
             
         and after that you can bind your parametr
         
