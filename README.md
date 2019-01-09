@@ -60,61 +60,62 @@ Binding activity
 
 Binding Adapter to TabLayout and ViewPager
     - [activity_page_list.xml](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/src/main/res/layout/activity_page_list.xml)
-        ```xml
-            <layout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+    ```xml
+    <layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-                <data>
-                    <!-- variable of ViewPager for tabLayout-->
-                    <variable
-                        name="tabHandler"
-                        type="com.prime.custom_view.CustomViewPager" />
+        <data>
+            <!-- variable of ViewPager for tabLayout-->
+            <variable
+                name="tabHandler"
+                type="com.prime.custom_view.CustomViewPager" />
 
-                    <!-- adapter for ViewPager -->
-                    <variable
-                        name="adapterHandler"
-                        type="com.prime.android.PageListActivity.pagerAdapter" />
+            <!-- adapter for ViewPager -->
+            <variable
+                name="adapterHandler"
+                type="com.prime.android.PageListActivity.pagerAdapter" />
 
-                </data>
+        </data>
 
-                <androidx.coordinatorlayout.widget.CoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_toolbar"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--assign viewPager to Tablayout app:pager="@{tabHandler}"-->
+                <!--app:pager isn't available for assign ViewPager view, so I added that into java code with @BindingAdapter({"pager"})-->
+                <com.prime.custom_view.TabLayoutCustom
+                    android:id="@+id/tab_layout"
+                    style="@style/CustomTabLayoutStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    app:pager="@{tabHandler}" />
 
-                    <include layout="@layout/layout_toolbar"/>
+                <!--assign adapter to viewPager android:pagerAdapter="@{adapterHandler}"-->
+                <!--android:pagerAdapter isn't available too and I added that into java code with @BindingAdapter({"android:pagerAdapter"})-->
+                <com.prime.custom_view.CustomViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:pagerAdapter="@{adapterHandler}" />
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+            </LinearLayout>
 
-                        <!--assign viewPager to Tablayout app:pager="@{tabHandler}"-->
-                        <!--app:pager isn't available for assign ViewPager view, so I added that into java code with @BindingAdapter({"pager"})-->
-                        <com.prime.custom_view.TabLayoutCustom
-                            android:id="@+id/tab_layout"
-                            style="@style/CustomTabLayoutStyle"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/colorPrimary"
-                            app:pager="@{tabHandler}" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </layout>
+    ```
 
-                        <!--assign adapter to viewPager android:pagerAdapter="@{adapterHandler}"-->
-                        <!--android:pagerAdapter isn't available too and I added that into java code with @BindingAdapter({"android:pagerAdapter"})-->
-                        <com.prime.custom_view.CustomViewPager
-                            android:id="@+id/pager"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:pagerAdapter="@{adapterHandler}" />
 
-                    </LinearLayout>
-
-                </androidx.coordinatorlayout.widget.CoordinatorLayout>
-            </layout>
-        ```
-
-        I implemented @BindingAdapter into [BaseActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/baseClass/BaseActivity.java) you can check theme here.
+   I implemented @BindingAdapter into [BaseActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/baseClass/BaseActivity.java) you can check theme here.
 
 
     - for Binding Parameter you can check [PageListActivity.java](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/PageListActivity.java) to realise that better.
