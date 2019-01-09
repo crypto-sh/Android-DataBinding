@@ -49,14 +49,14 @@ Binding activity
            setContentView(R.layout.activity_main);             
         ```          
         to 
-        
-                ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);  
-            
+        ```java
+            ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);  
+        ```    
         and after that you can bind your parametr
-        
-                  binding.setTemp(user);
-                  binding.setHandler(new MyHandler());
-    
+        ```java
+            binding.setTemp(user);
+            binding.setHandler(new MyHandler());
+        ```   
 
 
 
