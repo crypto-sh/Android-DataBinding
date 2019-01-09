@@ -2,6 +2,8 @@
 
 Using android dataBinding step by step
 
+Handle TabLayout with dataBinding and also recyclerView with different type show
+
 for the first step you need add this code into your module gradle 
 
 ```groovy
@@ -41,16 +43,16 @@ Binding activity
           </layout>
         ```
    - change [MainActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/MainActivity.java)
-          change 
+        \nchange 
             ```java setContentView(R.layout.activity_main); ```       
-          to 
+        \nto 
             ```java ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main); ```
-      and after that you can bind your parametr
+        \nand after that you can bind your parametr
           ```java
               binding.setTemp(user);
               binding.setHandler(new MyHandler());
           ```
     
 
-Handle TabLayout with dataBinding and also recyclerView with different type show
+
 
