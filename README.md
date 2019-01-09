@@ -113,12 +113,17 @@ Binding Adapter to TabLayout and ViewPager
                 </androidx.coordinatorlayout.widget.CoordinatorLayout>
             </layout>
         ```
+
         I implemented @BindingAdapter into [BaseActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/baseClass/BaseActivity.java) you can check theme here.
+
 
     - for Binding Parameter you can check [PageListActivity.java](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/PageListActivity.java) to realise that better.
 
+
 Binding ImageView source
+
     for binding image src we need to use @BindingAdapter("android:src") and you can check it into [BaseActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/baseClass/BaseActivity.java)
+
     ```java
         @BindingAdapter("android:src")
         public static void BindingImageDetails(ImageViewCustom imageView, String url) {
