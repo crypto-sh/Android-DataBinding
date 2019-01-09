@@ -85,10 +85,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+
+    /**
+     * binding all image source
+     * we are going to add image path into xml file like this android:src="@{image path}"
+     * @param imageView is the view  .
+     * @param url is th image Path you add into xml.
+     * I used Custom ImageView and you can change ImageLoader Library into ImageViewCustom
+    */
     @BindingAdapter("android:src")
-    public static void BindingImageDetails(ImageViewCustom imageview, String url) {
+    public static void BindingImageDetails(ImageViewCustom imageView, String url) {
         if (!PublicFunction.StringIsEmptyOrNull(url)) {
-            imageview.loadImage(url);
+            imageView.loadImage(url);
         }
     }
 

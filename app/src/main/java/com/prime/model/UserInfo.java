@@ -9,14 +9,14 @@ import androidx.databinding.BaseObservable;
  */
 public class UserInfo extends BaseObservable {
 
-    public static String Key_UserInfo       = "UserInfo";
+    private static String Key_UserInfo       = "UserInfo";
 
-    public static String Key_Username       = "username";
-    public static String Key_nicename       = "nicename";
-    public static String Key_mobile         = "mobile";
-    public static String Key_sessionid      = "sessionid";
-    public static String Key_userID         = "userId";
-    public static String Key_SubscriberId   = "subscriberId";
+    private static String Key_Username       = "username";
+    private static String Key_nicename       = "nicename";
+    private static String Key_mobile         = "mobile";
+    private static String Key_sessionid      = "sessionid";
+    private static String Key_userID         = "userId";
+    private static String Key_SubscriberId   = "subscriberId";
 
     String username = "";
     String nicename = "";

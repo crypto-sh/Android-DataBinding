@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
+        <!--UserInfo is BaseObservable Object-->
         <variable name="temp"        type="com.prime.model.UserInfo"/>
+        <!--MyHandler is method in MainActivity -->
         <variable name="handler"     type="com.prime.android.MainActivity.MyHandler"/>
     </data>
     <LinearLayout
@@ -20,7 +22,5 @@
             android:text="@={temp.nicename}"
             android:onClick="@{() -> handler.callService()}"/>
 
-
     </LinearLayout>
-
 </layout>

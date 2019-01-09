@@ -1,7 +1,10 @@
 package com.prime.android;
 
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -25,6 +28,7 @@ public class PageListActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = setContentView(PageListActivity.this, R.layout.activity_page_list);
+
         getPageData();
     }
 
@@ -34,9 +38,9 @@ public class PageListActivity extends BaseActivity {
     }
 
     private void setData(PageDataParcelable homeData) {
-        pagerAdapter adapter = new pagerAdapter(homeData, getSupportFragmentManager());
-        binding.setAdapterHandler(adapter);
+        binding.setAdapterHandler(new pagerAdapter(homeData, getSupportFragmentManager()));
         binding.setTabHandler(binding.pager);
+
     }
 
     public class pagerAdapter extends FragmentStatePagerAdapter {
@@ -50,7 +54,6 @@ public class PageListActivity extends BaseActivity {
 
         @Override
         public Fragment getItem(int position) {
-
             return ListFragment.newInstance(data);
         }
 

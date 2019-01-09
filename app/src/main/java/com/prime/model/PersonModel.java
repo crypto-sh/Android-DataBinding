@@ -6,7 +6,7 @@ import android.os.Parcelable;
 /**
  * Created by alishatergholi on 3/8/18.
  */
-public class PersonModel implements Parcelable{
+public class PersonModel implements Parcelable {
 
     public String mId;
     public String mTitle;

@@ -65,7 +65,6 @@ public class ImageViewCustom extends AppCompatImageView {
             listener.onStart();
         }
         Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(this);
-
 //        GlideApp
 //                .with(this.getContext())
 //                .load(url)

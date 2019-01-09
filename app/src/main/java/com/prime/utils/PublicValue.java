@@ -1,7 +1,6 @@
 package com.prime.utils;
 
 
-import android.content.Context;
 
 import com.prime.BuildConfig;
 
@@ -24,9 +23,6 @@ public class PublicValue {
     public static final String EXTENSION_PNG = ".png";
 
     public static final String DIRECTORY_NAME_IMAGE = DIRECTORY_NAME + "/Image";
-
-    public final static int STATUS_SUCCESS      = 1;
-    public final static int STATUS_FAILED       = 0;
 
     public final static String EXTRA_DETAILS    = "details";
 

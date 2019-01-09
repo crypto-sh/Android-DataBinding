@@ -18,6 +18,7 @@ import com.prime.model.PageDataParcelable;
 import com.prime.utils.PublicFunction;
 
 
+
 /**
  * A simple {@link BaseFragment} subclass.
  * Use the {@link ListFragment#newInstance} factory method to
@@ -59,14 +60,15 @@ public class ListFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         FragmentListBinding binding = setContentView(container,R.layout.fragment_list);
+
         View view = binding.getRoot();
         binding.recyclerView.setLayoutManager(new LayoutManagerCustom(getContext(),true));
         RecyclerAdapterPageList adapter = new RecyclerAdapterPageList((item, type) -> {
+
             PublicFunction.LogData(true,ListFragment.class.getSimpleName(),"onSelectedItem : " + item.title);
+
         },listRows.listRow);
         binding.setAdapter(adapter);
         return view;
     }
-
-
 }

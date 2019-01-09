@@ -10,7 +10,7 @@ import android.view.MotionEvent;
  */
 public class CustomViewPager  extends ViewPager {
 
-    private boolean swipeLocked = true;
+    private boolean swipeLocked = false;
 
     public CustomViewPager(Context context) {
         super(context);

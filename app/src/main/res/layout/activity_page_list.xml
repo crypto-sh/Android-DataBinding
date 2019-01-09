@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable
-            name="adapterHandler"
-            type="androidx.fragment.app.FragmentStatePagerAdapter" />
+        <!-- variable of ViewPager for tabLayout-->
         <variable
             name="tabHandler"
             type="com.prime.custom_view.CustomViewPager" />
+
+        <!-- adapter for ViewPager -->
+        <variable
+            name="adapterHandler"
+            type="com.prime.android.PageListActivity.pagerAdapter" />
+
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -23,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--assign viewPager to Tablayout app:pager="@{tabHandler}"-->
             <com.prime.custom_view.TabLayoutCustom
                 android:id="@+id/tab_layout"
                 style="@style/CustomTabLayoutStyle"
@@ -31,6 +37,7 @@
                 android:background="@color/colorPrimary"
                 app:pager="@{tabHandler}" />
 
+            <!--assign adapter to viewPager android:pagerAdapter="@{adapterHandler}"-->
             <com.prime.custom_view.CustomViewPager
                 android:id="@+id/pager"
                 android:layout_width="match_parent"
