@@ -45,14 +45,15 @@ Binding activity
    - change [MainActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/MainActivity.java)
   
         change 
-            ```java 
-                setContentView(R.layout.activity_main); 
-            ```       
+        
+            ```java setContentView(R.layout.activity_main); ```       
+            
         to 
-            ```java 
-                ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main); 
-            ```        
+        
+            ```java ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);  ```        
+            
         and after that you can bind your parametr
+        
             ```java
                   binding.setTemp(user);
                   binding.setHandler(new MyHandler());
