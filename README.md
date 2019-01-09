@@ -58,10 +58,11 @@ Binding activity
             binding.setHandler(new MyHandler());
         ```   
 
-Binding Adapter to TabLayout and ViewPager
-    - [activity_page_list.xml](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/src/main/res/layout/activity_page_list.xml)
-    ```xml
-    <layout
+Binding Adapter to TabLayout and ViewPager        
+    
+    - [activity_page_list.xml](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/src/main/res/layout/activity_page_list.xml) 
+        ```xml
+             <layout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -112,12 +113,8 @@ Binding Adapter to TabLayout and ViewPager
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </layout>
-    ```
-
-
-   I implemented @BindingAdapter into [BaseActivity](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/baseClass/BaseActivity.java) you can check theme here.
-
-
+        ```
+  
     - for Binding Parameter you can check [PageListActivity.java](https://github.com/alishatergholi/Android-DataBinding/blob/master/app/src/main/java/com/prime/android/PageListActivity.java) to realise that better.
 
 
